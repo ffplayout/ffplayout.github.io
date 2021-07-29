@@ -6,12 +6,12 @@ draft: false
 
 **Welcome to ffplayout, the 24/7 cloud ready playout solution.**
 
-ffplayout is made mostly for Linux, but the [engine](https://github.com/ffplayout/ffplayout-engine) can run everywhere, where python and ffmpeg can run. But outside of Linux you have to use your one startup/daemon solution.
+ffplayout is made mostly for Linux, but the [engine](https://github.com/ffplayout/ffplayout_engine) can run everywhere, where python and ffmpeg can run. But outside of Linux you have to use your one startup/daemon solution.
 
 The most tested system is debian, if you have permission problems on systems with Selinux you have to get help from communities how have experience in that area.
 
 ffplayout comes in three programs, which are interdependent:
-- [ffplayout-engine](https://github.com/ffplayout/ffplayout-engine)
+- [ffplayout_engine](https://github.com/ffplayout/ffplayout_engine)
     - this program can run by it self and don't need the other ones
     - if you don't need a GUI, then you will be totally fine with it
 - [ffplayout-api](https://github.com/ffplayout/ffplayout-api)
@@ -22,7 +22,7 @@ ffplayout comes in three programs, which are interdependent:
 What ffplayout can do
 -----
 
-When we talk about the features, we mostly talk about what the **ffplayout-engine** can do. Because this is the heart of the project, and the other ones are only for controlling.
+When we talk about the features, we mostly talk about what the **ffplayout_engine** can do. Because this is the heart of the project, and the other ones are only for controlling.
 
 The main idea behind ffplayout is, that it works with playlists. Every day has its one playlist, so to have a continuous endless stream every playlist needs to be 24 hours long. When a playist is not long enough the *engine* will fill the rest with a filler clip, or with black. Is the playlist longer it will be trimmed.
 The playlist will be dynamically readed, that mean that you can still edit it, while it is already playing. But you can only change or add clips on a position in the future and next but one clip. In other words: when clip 7 in playlist is currently playing, you can change and add clips after position 9.
@@ -35,16 +35,16 @@ A second scenario is to, that ffplayout can play clips from a given folder. The 
 - overlay a **logo**
 - **overlay text**, controllable through [messenger](https://github.com/ffplayout/messenger) or [ffplayout-frontend](https://github.com/ffplayout/ffplayout-frontend) (needs ffmpeg with libzmq)
 - **EBU R128 loudness** normalization (single pass) (experimental)
-- loop clip in playlist which `out` value is higher then its `duration`, see also [Loop Clip](https://github.com/ffplayout/ffplayout-engine/wiki/Loop-Clip)
+- loop clip in playlist which `out` value is higher then its `duration`, see also [Loop Clip](https://github.com/ffplayout/ffplayout_engine/wiki/Loop-Clip)
 - loop playlist infinitely
 - trim and fade the last clip, to get full 24 hours
 - set custom day start, so you can have playlist for example: from 6am to 6am, instate of 0am to 12pm
 - stream to server or play on desktop
 - on posix systems ffplayout can reload config with *SIGHUP*
 - logging to files, or colored output to console
-- add custom [filters](https://github.com/ffplayout/ffplayout-engine/tree/master/ffplayout/filters)
-- add custom [arguments](https://github.com/ffplayout/ffplayout-engine/tree/master/ffplayout/config)
-- different types of [output](https://github.com/ffplayout/ffplayout-engine/wiki/Outputs):
+- add custom [filters](https://github.com/ffplayout/ffplayout_engine/tree/master/ffplayout/filters)
+- add custom [arguments](https://github.com/ffplayout/ffplayout_engine/tree/master/ffplayout/config)
+- different types of [output](https://github.com/ffplayout/ffplayout_engine/wiki/Outputs):
   - **stream**
   - **desktop**
   - **HLS**
@@ -69,7 +69,7 @@ It's always nice to praise functions, but ffplayout can not do everything. It ha
 
 There is a frontend for ffplayout, but the frontend is not a full fledged program scheduling solution. The frontend is more made for simple controlling the engine and media storage, for sending text messages and explore the log files. There is a playlist creator, with some basic functions but it is not a professional scheduling program. The needs from users are to different to catch all of them, so it is up to you, to create your one scheduling solution. Anyway there is also a simple [playlist generator](https://github.com/ffplayout/playlist-generator), so maybe that is a good starting point for you.
 
-ffplayout can not work with a ingest stream. When you work with [SRS](https://github.com/ossrs/srs) and you produce a HLS stream with it, there is a workaround for it, but it is not widely tested and at the moment undocumented, see [#96](https://github.com/ffplayout/ffplayout-engine/issues/96).
+ffplayout can not work with a ingest stream. When you work with [SRS](https://github.com/ossrs/srs) and you produce a HLS stream with it, there is a workaround for it, but it is not widely tested and at the moment undocumented, see [#96](https://github.com/ffplayout/ffplayout_engine/issues/96).
 
 ffplayout can not cross fade clips.
 
@@ -120,6 +120,6 @@ Detail Description
 
 On the following pages you found more details from every program part and a install instruction. If you don't want to install it by hand, you can give the [docker version](https://github.com/ffplayout/ffplayout-docker) a try.
 
-- [ffplayout-engine](/ffplayout-engine)
+- [ffplayout_engine](/ffplayout_engine)
 - [ffplayout-api](/ffplayout-api)
 - [ffplayout-frontend](/ffplayout-frontend)
