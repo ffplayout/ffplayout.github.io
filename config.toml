@@ -36,17 +36,22 @@ paginate = 10
     identifier = "home"
     url = "/"
   [[menu.main]]
-    name = "ffplayout-engine"
+    name = "Engine"
     weight = 2
     identifier = "ffplayout-engine"
     url = "/ffplayout-engine/"
   [[menu.main]]
-    name = "ffplayout-api"
+    name = "API"
     weight = 3
     identifier = "ffplayout-api"
     url = "/ffplayout-api/"
   [[menu.main]]
-    name = "ffplayout-frontend"
+    name = "Frontend"
     weight = 4
     identifier = "ffplayout-frontend"
     url = "/ffplayout-frontend/"
+  [[menu.main]]
+    name = "Installer"
+    weight = 4
+    identifier = "ffplayout-installer"
+    url = "/ffplayout-installer/"
