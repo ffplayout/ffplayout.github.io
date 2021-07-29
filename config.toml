@@ -1,0 +1,52 @@
+baseURL = "https://ffplayout.github.io/"
+languageCode = "en-us"
+title = "ffplayout"
+theme = "m10c"
+
+canonifyurls = true
+paginate = 10
+
+[indexes]
+  tag = "tags"
+  topic = "topics"
+
+[params]
+  # Shown in the home page
+  subtitle = "python and ffmpeg based playout"
+  brand = "ffplayout"
+  highlightjs = "androidstudio"
+  dateFormat = "02 Jan 2006, 15:04"
+
+  author = "Jonathan Baecker"
+  description = "python and ffmpeg based playout"
+  avatar = "/img/logo.png"
+  menu_item_separator = "<br />"
+  favicon = "/favicon.ico"
+
+  [[params.social]]
+    icon = "github"
+    name = "ffplayout"
+    url = "https://github.com/ffplayout"
+
+[menu]
+  # Shown in the side menu.
+  [[menu.main]]
+    name = "Home"
+    weight = 1
+    identifier = "home"
+    url = "/"
+  [[menu.main]]
+    name = "ffplayout-engine"
+    weight = 2
+    identifier = "ffplayout-engine"
+    url = "/ffplayout-engine/"
+  [[menu.main]]
+    name = "ffplayout-api"
+    weight = 3
+    identifier = "ffplayout-api"
+    url = "/ffplayout-api/"
+  [[menu.main]]
+    name = "ffplayout-frontend"
+    weight = 4
+    identifier = "ffplayout-frontend"
+    url = "/ffplayout-frontend/"

@@ -1,0 +1,166 @@
+<!doctype html><html lang=en-us>
+<head>
+<title>ffplayout Engine // ffplayout</title>
+<link rel="shortcut icon" href=https://ffplayout.github.io/favicon.ico>
+<meta charset=utf-8>
+<meta name=generator content="Hugo 0.86.0">
+<meta name=viewport content="width=device-width,initial-scale=1">
+<meta name=author content="Jonathan Baecker">
+<meta name=description content>
+<link rel=stylesheet href=https://ffplayout.github.io/css/main.min.688c7f4c9a9cab69fcda64c18a9f8c2c11b98a80bbadfb5534d878d090e6f022.css>
+<meta name=twitter:card content="summary">
+<meta name=twitter:title content="ffplayout Engine">
+<meta name=twitter:description content="Features  have all values in a separate config file dynamic playlist replace missing playlist or clip with a dummy clip playing clips from watched folder send emails with error message overlay a logo overlay text, controllable through messenger or ffplayout-frontend (needs ffmpeg with libzmq) EBU R128 loudness normalization (single pass) (experimental) loop clip in playlist which out value is higher then its duration, see also Loop Clip loop playlist infinitely trim and fade the last clip, to get full 24 hours when playlist is not 24 hours long, loop filler clip until time is full set custom day start, so you can have playlist for example: from 6am to 6am, instate of 0am to 12pm normal system requirements and no special tools no GPU power is needed stream to server or play on desktop on posix systems ffplayout can reload config with SIGHUP logging to files, or colored output to console add filters to input, if is necessary to match output stream:  yadif (deinterlacing) pad (letterbox or pillarbox to fit aspect) fps (change fps) scale (fit target resolution) aevalsrc (if video have no audio) apad (add silence if audio duration is to short) tpad (add black frames if video duration is to short)   add custom filters add custom arguments different types of output:  stream desktop HLS custom   Multi Channel  Requirements  python version 3.">
+<meta property="og:title" content="ffplayout Engine">
+<meta property="og:description" content="Features  have all values in a separate config file dynamic playlist replace missing playlist or clip with a dummy clip playing clips from watched folder send emails with error message overlay a logo overlay text, controllable through messenger or ffplayout-frontend (needs ffmpeg with libzmq) EBU R128 loudness normalization (single pass) (experimental) loop clip in playlist which out value is higher then its duration, see also Loop Clip loop playlist infinitely trim and fade the last clip, to get full 24 hours when playlist is not 24 hours long, loop filler clip until time is full set custom day start, so you can have playlist for example: from 6am to 6am, instate of 0am to 12pm normal system requirements and no special tools no GPU power is needed stream to server or play on desktop on posix systems ffplayout can reload config with SIGHUP logging to files, or colored output to console add filters to input, if is necessary to match output stream:  yadif (deinterlacing) pad (letterbox or pillarbox to fit aspect) fps (change fps) scale (fit target resolution) aevalsrc (if video have no audio) apad (add silence if audio duration is to short) tpad (add black frames if video duration is to short)   add custom filters add custom arguments different types of output:  stream desktop HLS custom   Multi Channel  Requirements  python version 3.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://ffplayout.github.io/ffplayout-engine/"><meta property="article:section" content>
+<meta property="article:published_time" content="2021-07-29T09:19:16+02:00">
+<meta property="article:modified_time" content="2021-07-29T09:19:16+02:00">
+</head>
+<body>
+<header class=app-header>
+<a href=https://ffplayout.github.io/><img class=app-header-avatar src=https://ffplayout.github.io/img/logo.png alt="Jonathan Baecker"></a>
+<h1>ffplayout</h1>
+<nav class=app-header-menu>
+<a class=app-header-menu-item href=https://ffplayout.github.io/>Home</a>
+<br>
+<a class=app-header-menu-item href=https://ffplayout.github.io/ffplayout-engine/>ffplayout-engine</a>
+<br>
+<a class=app-header-menu-item href=https://ffplayout.github.io/ffplayout-api/>ffplayout-api</a>
+<br>
+<a class=app-header-menu-item href=https://ffplayout.github.io/ffplayout-frontend/>ffplayout-frontend</a>
+</nav>
+<p>python and ffmpeg based playout</p>
+<div class=app-header-social>
+<a href=https://github.com/ffplayout target=_blank rel="noreferrer noopener"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-github"><title>ffplayout</title><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37.0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44.0 0020 4.77 5.07 5.07.0 0019.91 1S18.73.65 16 2.48a13.38 13.38.0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07.0 005 4.77 5.44 5.44.0 003.5 8.55c0 5.42 3.3 6.61 6.44 7A3.37 3.37.0 009 18.13V22"/></svg>
+</a>
+</div>
+</header>
+<main class=app-container>
+<article class=post>
+<header class=post-header>
+<h1 class=post-title>ffplayout Engine</h1>
+</header>
+<div class=post-content>
+<h2 id=features><strong>Features</strong></h2>
+<ul>
+<li>have all values in a separate config file</li>
+<li>dynamic playlist</li>
+<li>replace missing playlist or clip with a dummy clip</li>
+<li>playing clips from <a href=https://github.com/ffplayout/ffplayout_engine/wiki/Watch-Folder>watched folder</a></li>
+<li>send emails with error message</li>
+<li>overlay a logo</li>
+<li>overlay text, controllable through <a href=https://github.com/ffplayout/messenger>messenger</a> or <a href=https://github.com/ffplayout/ffplayout-frontend>ffplayout-frontend</a> (needs ffmpeg with libzmq)</li>
+<li><strong>EBU R128 loudness</strong> normalization (single pass) (experimental)</li>
+<li>loop clip in playlist which <code>out</code> value is higher then its <code>duration</code>, see also <a href=https://github.com/ffplayout/ffplayout_engine/wiki/Loop-Clip>Loop Clip</a></li>
+<li>loop playlist infinitely</li>
+<li>trim and fade the last clip, to get full 24 hours</li>
+<li>when playlist is not 24 hours long, loop filler clip until time is full</li>
+<li>set custom day start, so you can have playlist for example: from 6am to 6am, instate of 0am to 12pm</li>
+<li>normal system requirements and no special tools</li>
+<li>no GPU power is needed</li>
+<li>stream to server or play on desktop</li>
+<li>on posix systems ffplayout can reload config with <em>SIGHUP</em></li>
+<li>logging to files, or colored output to console</li>
+<li>add filters to input, if is necessary to match output stream:
+<ul>
+<li><strong>yadif</strong> (deinterlacing)</li>
+<li><strong>pad</strong> (letterbox or pillarbox to fit aspect)</li>
+<li><strong>fps</strong> (change fps)</li>
+<li><strong>scale</strong> (fit target resolution)</li>
+<li><strong>aevalsrc</strong> (if video have no audio)</li>
+<li><strong>apad</strong> (add silence if audio duration is to short)</li>
+<li><strong>tpad</strong> (add black frames if video duration is to short)</li>
+</ul>
+</li>
+<li>add custom <a href=https://github.com/ffplayout/ffplayout_engine/tree/master/ffplayout/filters>filters</a></li>
+<li>add custom <a href=https://github.com/ffplayout/ffplayout_engine/tree/master/ffplayout/config>arguments</a></li>
+<li>different types of <a href=https://github.com/ffplayout/ffplayout_engine/wiki/Outputs>output</a>:
+<ul>
+<li><strong>stream</strong></li>
+<li><strong>desktop</strong></li>
+<li><strong>HLS</strong></li>
+<li><strong>custom</strong></li>
+</ul>
+</li>
+<li>Multi Channel</li>
+</ul>
+<h2 id=requirements>Requirements</h2>
+<ul>
+<li>python version 3.6+</li>
+<li>python module <strong>watchdog</strong> (only when <code>playlist_mode: False</code>)</li>
+<li>python module <strong>colorama</strong> if you are on windows</li>
+<li>python modules <strong>PyYAML</strong>, <strong>requests</strong>, <strong>supervisor</strong></li>
+<li><strong>ffmpeg v4.2+</strong> and <strong>ffprobe</strong> (<strong>ffplay</strong> if you want to play on desktop)</li>
+<li>if you want to overlay text, ffmpeg needs to have <strong>libzmq</strong></li>
+<li>RAM and CPU depends on video resolution, minimum 4 threads and 3GB RAM for 720p are recommend</li>
+</ul>
+<h2 id=json-playlist-example>JSON Playlist Example</h2>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-json data-lang=json>{
+    <span style=color:#f92672>&#34;channel&#34;</span>: <span style=color:#e6db74>&#34;Test 1&#34;</span>,
+    <span style=color:#f92672>&#34;date&#34;</span>: <span style=color:#e6db74>&#34;2019-03-05&#34;</span>,
+    <span style=color:#f92672>&#34;program&#34;</span>: [{
+            <span style=color:#f92672>&#34;in&#34;</span>: <span style=color:#ae81ff>0</span>,
+            <span style=color:#f92672>&#34;out&#34;</span>: <span style=color:#ae81ff>647.68</span>,
+            <span style=color:#f92672>&#34;duration&#34;</span>: <span style=color:#ae81ff>647.68</span>,
+            <span style=color:#f92672>&#34;source&#34;</span>: <span style=color:#e6db74>&#34;/Media/clip1.mp4&#34;</span>
+        }, {
+            <span style=color:#f92672>&#34;in&#34;</span>: <span style=color:#ae81ff>0</span>,
+            <span style=color:#f92672>&#34;out&#34;</span>: <span style=color:#ae81ff>149</span>,
+            <span style=color:#f92672>&#34;duration&#34;</span>: <span style=color:#ae81ff>149</span>,
+            <span style=color:#f92672>&#34;source&#34;</span>: <span style=color:#e6db74>&#34;/Media/clip2.mp4&#34;</span>
+        }, {
+            <span style=color:#f92672>&#34;in&#34;</span>: <span style=color:#ae81ff>0</span>,
+            <span style=color:#f92672>&#34;out&#34;</span>: <span style=color:#ae81ff>114.72</span>,
+            <span style=color:#f92672>&#34;duration&#34;</span>: <span style=color:#ae81ff>114.72</span>,
+            <span style=color:#f92672>&#34;source&#34;</span>: <span style=color:#e6db74>&#34;/Media/clip3.mp4&#34;</span>,
+            <span style=color:#f92672>&#34;category&#34;</span>: <span style=color:#e6db74>&#34;advertisement&#34;</span>
+        }, {
+            <span style=color:#f92672>&#34;in&#34;</span>: <span style=color:#ae81ff>0</span>,
+            <span style=color:#f92672>&#34;out&#34;</span>: <span style=color:#ae81ff>2531.36</span>,
+            <span style=color:#f92672>&#34;duration&#34;</span>: <span style=color:#ae81ff>2531.36</span>,
+            <span style=color:#f92672>&#34;source&#34;</span>: <span style=color:#e6db74>&#34;/Media/clip4.mp4&#34;</span>,
+            <span style=color:#f92672>&#34;category&#34;</span>: <span style=color:#e6db74>&#34;&#34;</span>
+        }
+    ]
+}
+</code></pre></div><p><strong>If you need a simple playlist generator check:</strong> <a href=https://github.com/ffplayout/playlist-generator>playlist-generator</a></p>
+<p>The playlist can be extend, to use custom attributes in your <a href=https://ffplayout.github.io/ffplayout/filters/>filters</a>.</p>
+<h2 id=warning><strong>Warning</strong></h2>
+<p>(Endless) streaming over multiple days will only work when config have <strong>day_start</strong> value and the <strong>length</strong> value is <strong>24 hours</strong>. If you need only some hours for every day, use a <em>cron</em> job, or something similar.</p>
+<h2 id=remote-source-from-url>Remote source from URL</h2>
+<p>You can use sources from remote URL in that way:</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-json data-lang=json><span style=color:#960050;background-color:#1e0010>...</span>
+        {
+            <span style=color:#f92672>&#34;in&#34;</span>: <span style=color:#ae81ff>0</span>,
+            <span style=color:#f92672>&#34;out&#34;</span>: <span style=color:#ae81ff>149</span>,
+            <span style=color:#f92672>&#34;duration&#34;</span>: <span style=color:#ae81ff>149</span>,
+            <span style=color:#f92672>&#34;source&#34;</span>: <span style=color:#e6db74>&#34;https://example.org/big_buck_bunny.webm&#34;</span>
+        }
+</code></pre></div><p>But be careful with it, better test it multiple times!</p>
+<p>More informations in <a href=https://github.com/ffplayout/ffplayout_engine/wiki/Remote-URL-Source>Wiki</a></p>
+<h2 id=installation>Installation</h2>
+<p>Check <a href=docs/INSTALL.md>INSTALL.md</a></p>
+<h2 id=start-with-arguments>Start with Arguments</h2>
+<p>ffplayout also allows the passing of parameters:</p>
+<ul>
+<li><code>-c, --config</code> use given config file</li>
+<li><code>-f, --folder</code> use folder for playing</li>
+<li><code>-l, --log</code> for user-defined log path, <em>none</em> for console output</li>
+<li><code>-i, --loop</code> loop playlist infinitely</li>
+<li><code>-m, --mode</code> set output mode: <strong>desktop</strong>, <strong>hls</strong>, <strong>stream</strong>, &mldr;</li>
+<li><code>-p, --playlist</code> for playlist file</li>
+<li><code>-s, --start</code> set start time in <em>hh:mm:ss</em>, <em>now</em> for start at playlist begin</li>
+<li><code>-t, --length</code> set length in <em>hh:mm:ss</em>, <em>none</em> for no length check</li>
+</ul>
+<p>You can run the command like:</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-SHELL data-lang=SHELL>./ffplayout.py -l none -p ~/playlist.json -d -s now -t none -m desktop
+</code></pre></div>
+</div>
+<div class=post-footer>
+</div>
+</article>
+</main>
+</body>
+</html>
