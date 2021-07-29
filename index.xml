@@ -2,4 +2,9 @@
 You can install it on a fresh Debian like system with the standalone installer. Or read the instruction install.md for manual installation.</description></item><item><title/><link>https://ffplayout.github.io/ffplayout-frontend/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://ffplayout.github.io/ffplayout-frontend/</guid><description>ffplayout-frontend This web GUI is for managing ffplayout_engine and it depend on ffplayout-api.
 The Interface is mostly made for 24/7 streaming. Other scenarios like streaming in folder mode or playlists with no starting time will work, but is not shown correctly.
 For a better understanding about the functionality, take a look to the screenshots below.
-You can install it on a fresh Debian like system with the standalone installer. Or read the instruction install.</description></item></channel></rss>
+You can install it on a fresh Debian like system with the standalone installer. Or read the instruction install.</description></item><item><title/><link>https://ffplayout.github.io/ffplayout-installer/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://ffplayout.github.io/ffplayout-installer/</guid><description>ffplayout Installer Standalone installer for the ffplayout app collection
+Run install.sh as root for full installation.
+A debian based system is recommend.
+CentOS 8+ and Fedora can work, but is not widely tested. If you really need it, you have to apply SeLinux rules. For that you have selinux.sh, check this script carefully if the rules a ok for you.
+The most tested system is Debian 10.
+If you prefer a dockerized version of ffplayout, checkout ffplayout-docker</description></item></channel></rss>
