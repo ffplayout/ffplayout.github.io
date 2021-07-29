@@ -1,8 +1,4 @@
----
-title: "ffplayout Engine"
-date: 2021-07-29T09:19:16+02:00
-draft: false
----
+# [ffplayout Engine](https://github.com/ffplayout/ffplayout_engine)
 
 **Features**
 -----
@@ -89,7 +85,7 @@ JSON Playlist Example
 
 **If you need a simple playlist generator check:** [playlist-generator](https://github.com/ffplayout/playlist-generator)
 
-The playlist can be extend, to use custom attributes in your [filters](/ffplayout/filters/).
+The playlist can be extend, to use custom attributes in your [filters](https://github.com/ffplayout/ffplayout_engine/ffplayout/filters/).
 
 **Warning**
 -----
@@ -118,7 +114,7 @@ More informations in [Wiki](https://github.com/ffplayout/ffplayout_engine/wiki/R
 Installation
 -----
 
-Check [INSTALL.md](docs/INSTALL.md)
+Check [INSTALL.md](https://github.com/ffplayout/ffplayout_engine/blob/master/docs/INSTALL.md)
 
 Start with Arguments
 -----

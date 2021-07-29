@@ -1,5 +1,6 @@
-# ffplayout Installer
-Standalone installer for the ffplayout app collection
+# [ffplayout Installer](https://github.com/ffplayout/ffplayout-installer)
+
+ffplayout installer is a standalone installer for the ffplayout app collection.
 
 Run `install.sh` as *root* for full installation.
 
