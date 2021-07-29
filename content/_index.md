@@ -119,7 +119,3 @@ Detail Description
 -----
 
 On the following pages you found more details from every program part and a install instruction. If you don't want to install it by hand, you can give the [docker version](https://github.com/ffplayout/ffplayout-docker) a try.
-
-- [ffplayout_engine](/ffplayout_engine)
-- [ffplayout-api](/ffplayout-api)
-- [ffplayout-frontend](/ffplayout-frontend)
