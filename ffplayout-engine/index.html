@@ -33,24 +33,19 @@
 </span></span><span style=display:flex><span>            <span style=color:#f92672>&#34;duration&#34;</span>: <span style=color:#ae81ff>149</span>,
 </span></span><span style=display:flex><span>            <span style=color:#f92672>&#34;source&#34;</span>: <span style=color:#e6db74>&#34;https://example.org/big_buck_bunny.webm&#34;</span>
 </span></span><span style=display:flex><span>        }
-</span></span></code></pre></div><p>But be careful with it, better test it multiple times!</p><p>More informations in <a href=https://github.com/ffplayout/ffplayout_engine/wiki/Remote-URL-Source>Wiki</a></p><h2 id=installation>Installation</h2><p>Check <a href=https://github.com/ffplayout/ffplayout_engine/blob/master/docs/INSTALL.md>INSTALL.md</a></p><h2 id=start-with-arguments>Start with Arguments</h2><p>ffplayout also allows the passing of parameters:</p><pre tabindex=0><code>OPTIONS:
-    -c, --config &lt;CONFIG&gt;             File path to ffplayout.conf
-    -f, --folder &lt;FOLDER&gt;             Play folder content
-    -g, --generate &lt;YYYY-MM-DD&gt;...    Generate playlist for date or date-range, like: 2022-01-01 - 2022-01-10:
-    -h, --help                        Print help information
-    -i, --infinit                     Loop playlist infinitely
-    -l, --log &lt;LOG&gt;                   File path for logging
-    -m, --play-mode &lt;PLAY_MODE&gt;       Playing mode: folder, playlist
-    -o, --output &lt;OUTPUT&gt;             Set output mode: desktop, hls, stream
-    -p, --playlist &lt;PLAYLIST&gt;         Path from playlist
-    -s, --start &lt;START&gt;               Start time in &#39;hh:mm:ss&#39;, &#39;now&#39; for start with first
-    -t, --length &lt;LENGTH&gt;             Set length in &#39;hh:mm:ss&#39;, &#39;none&#39; for no length check
-    -v, --volume &lt;VOLUME&gt;             Set audio volume
-    -V, --version                     Print version information
-
-
-You can run the command like:
-
-```Bash
-./ffplayout -l none -p ~/playlist.json -o desktop
-</code></pre></div><div class=post-footer></div></article></main></body></html>
+</span></span></code></pre></div><p>But be careful with it, better test it multiple times!</p><p>More informations in <a href=https://github.com/ffplayout/ffplayout_engine/wiki/Remote-URL-Source>Wiki</a></p><h2 id=installation>Installation</h2><p>Check <a href=https://github.com/ffplayout/ffplayout_engine/blob/master/docs/INSTALL.md>INSTALL.md</a></p><h2 id=start-with-arguments>Start with Arguments</h2><p>ffplayout also allows the passing of parameters:</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-Bash data-lang=Bash><span style=display:flex><span>OPTIONS:
+</span></span><span style=display:flex><span>    -c, --config &lt;CONFIG&gt;             File path to ffplayout.conf
+</span></span><span style=display:flex><span>    -f, --folder &lt;FOLDER&gt;             Play folder content
+</span></span><span style=display:flex><span>    -g, --generate &lt;YYYY-MM-DD&gt;...    Generate playlist <span style=color:#66d9ef>for</span> date or date-range, like: 2022-01-01 - 2022-01-10:
+</span></span><span style=display:flex><span>    -h, --help                        Print help information
+</span></span><span style=display:flex><span>    -i, --infinit                     Loop playlist infinitely
+</span></span><span style=display:flex><span>    -l, --log &lt;LOG&gt;                   File path <span style=color:#66d9ef>for</span> logging
+</span></span><span style=display:flex><span>    -m, --play-mode &lt;PLAY_MODE&gt;       Playing mode: folder, playlist
+</span></span><span style=display:flex><span>    -o, --output &lt;OUTPUT&gt;             Set output mode: desktop, hls, stream
+</span></span><span style=display:flex><span>    -p, --playlist &lt;PLAYLIST&gt;         Path from playlist
+</span></span><span style=display:flex><span>    -s, --start &lt;START&gt;               Start time in <span style=color:#e6db74>&#39;hh:mm:ss&#39;</span>, <span style=color:#e6db74>&#39;now&#39;</span> <span style=color:#66d9ef>for</span> start with first
+</span></span><span style=display:flex><span>    -t, --length &lt;LENGTH&gt;             Set length in <span style=color:#e6db74>&#39;hh:mm:ss&#39;</span>, <span style=color:#e6db74>&#39;none&#39;</span> <span style=color:#66d9ef>for</span> no length check
+</span></span><span style=display:flex><span>    -v, --volume &lt;VOLUME&gt;             Set audio volume
+</span></span><span style=display:flex><span>    -V, --version                     Print version information
+</span></span></code></pre></div><p>You can run the command like:</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-Bash data-lang=Bash><span style=display:flex><span>./ffplayout -l none -p ~/playlist.json -o desktop
+</span></span></code></pre></div></div><div class=post-footer></div></article></main></body></html>
