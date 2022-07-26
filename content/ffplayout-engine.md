@@ -69,7 +69,7 @@ Start with Arguments
 ffplayout also allows the passing of parameters:
 
 
-```
+```Bash
 OPTIONS:
     -c, --config <CONFIG>             File path to ffplayout.conf
     -f, --folder <FOLDER>             Play folder content
@@ -84,7 +84,7 @@ OPTIONS:
     -t, --length <LENGTH>             Set length in 'hh:mm:ss', 'none' for no length check
     -v, --volume <VOLUME>             Set audio volume
     -V, --version                     Print version information
-
+```
 
 You can run the command like:
 
