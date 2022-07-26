@@ -1,1 +1,1 @@
-### Webpage for ffplayout app collection.
+### Webpage for [ffplayout](https://github.com/ffplayout/ffplayout) app collection.

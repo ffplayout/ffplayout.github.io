@@ -53,5 +53,5 @@ paginate = 10
   [[menu.main]]
     name = "Installer"
     weight = 4
-    identifier = "ffplayout-installer"
-    url = "/ffplayout-installer/"
+    identifier = "installer"
+    url = "/installer/"

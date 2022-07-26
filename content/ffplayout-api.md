@@ -1,5 +1,26 @@
-# [ffplayout API](https://github.com/ffplayout/ffplayout-api)
+**ffplayout-api**
+================
 
-Django REST API, backend for [ffplayout-frontend](https://github.com/ffplayout/ffplayout-frontend) and for controlling [ffplayout_engine](https://github.com/ffplayout/ffplayout_engine).
+ffplayout-api (ffpapi) is a non strict REST API for ffplayout. It makes it possible to control the engine, read and manipulate the config, save playlist, etc.
 
-You can install it on a fresh Debian like system with the [standalone installer](https://github.com/ffplayout/ffplayout-installer). Or read the instruction [install.md](/docs/INSTALL.md) for manual installation.
+To be able to use the API it is necessary to initialize the settings database first. To do that, run:
+
+```BASH
+ffpapi -i
+```
+
+Then add an admin user:
+
+```BASH
+ffpapi -u <USERNAME> -p <PASSWORD> -m <MAIL ADDRESS>
+```
+
+Then run the API thru the systemd service, or like:
+
+```BASH
+ffpapi -l 127.0.0.1:8787
+```
+
+**For possible endpoints read: [api endpoints](https://github.com/ffplayout/ffplayout/blob/master/docs/api.md)**
+
+ffpapi can also serve the browser based frontend, just run in your browser `127.0.0.1:8787`.
