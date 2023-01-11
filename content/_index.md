@@ -3,6 +3,7 @@ title: "ffplayout"
 date: 2021-07-29T09:19:16+02:00
 draft: false
 ---
+![ffplayput](/img/ffplayout.png)
 
 **Welcome to ffplayout, the 24/7 cloud ready playout solution.**
 
