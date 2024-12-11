@@ -1,22 +1,29 @@
 ### Install ffplayout
 
-ffplayout provides ***.deb** amd ***.rpm** packages, which makes it more easy to install and use, but there is still some steps to do.
+**Note:** This is the official and supported way.
 
-1. download the latest ffplayout from [release](https://github.com/ffplayout/ffplayout/releases/latest) page.
-2. install it with `apt install /tmp/ffplayout_<VERSION>_amd64.deb`
-3. install ffmpeg/ffprobe, or compile and copy it to **/usr/local/bin/**
-4. activate systemd services:
-    - `systemctl enable ffplayout`
-    - `systemctl enable --now ffpapi`
-5. add admin user to ffpapi:
-    - `ffpapi -a`
-6. use a revers proxy for SSL, Port is **8787**.
-7. login with your browser, address without proxy would be: **http://[IP ADDRESS]:8787**
+ffplayout provides ***.deb** and ***.rpm** packages, which makes it easier to install and use, but there are still some steps to follow.
 
-Default location for playlists and media files are: **/var/lib/ffplayout/**. If you need to change them, the media storage folder needs a symlink to **/usr/share/ffplayout/public/**.
+1. Download the latest ffplayout from the [release](https://github.com/ffplayout/ffplayout/releases/latest) page and place the package in the **/tmp** folder
+2. Install it with `apt install /tmp/ffplayout_<VERSION>_amd64.deb`
+3. Install ffmpeg/ffprobe, or compile and copy them to **/usr/local/bin/**
+4. Initialize the defaults and add a global admin user: `sudo -u ffpu ffplayout -i`
+5. Use a reverse proxy for SSL; the port is **8787**
+6. Log in with your browser. The address without a proxy would be: **http://[IP ADDRESS]:8787**
 
-When you don't need the frontend and API, skip enable the systemd service **ffpapi**.
+### Manual Install
 
-When playlists are created and the ffplayout output is configured, you can start the process: `systemctl start ffplayout`, or click start in frontend.
+**Note:** This is for advanced users only.
 
-If you want to configure ffplayout over terminal, you can edit **/etc/ffplayout/ffplayout.yml**.
+- Install ffmpeg/ffprobe, or compile and copy them to **/usr/local/bin/**
+- Download the latest archive from the [release](https://github.com/ffplayout/ffplayout/releases/latest) page
+- Copy the ffplayout binary to `/usr/bin/`
+- Copy **assets/ffplayout.yml** to `/etc/ffplayout`
+- Create the folder `/var/log/ffplayout`
+- Create the system user **ffpu**
+- Give ownership of `/etc/ffplayout` and `/var/log/ffplayout` to **ffpu**
+- Copy **assets/ffplayout.service** to `/etc/systemd/system`
+- Copy **assets/ffplayout.1.gz** to `/usr/share/man/man1/`
+- Copy the **public** folder to `/usr/share/ffplayout/`
+- Activate the service and run it: `systemctl enable --now ffplayout`
+- Initialize the defaults and add a global admin user: `sudo -u ffpu ffplayout -i`
